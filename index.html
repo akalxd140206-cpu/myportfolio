@@ -3,26 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>【Webコーダー】◯◯◯◯ のポートフォリオ | 心を込めて形にします</title>
-  <meta name="description" content="Webコーダー◯◯◯◯のポートフォリオサイトです。カフェ、子供服、SaaS、パーソナルジムなど、幅広いジャンルの「伝わる」レスポンシブLP制作の実績をご紹介します。お気軽にご相談ください。">
+  <title>菅野明日香 ポートフォリオ | ブランドに合わせた最適なLP制作</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ------------------------------
-       Base & Color Palette
-       【大人可愛い】カラーに変更
-    ------------------------------ */
     :root {
-      --color-main: #E29383;    /* 優しく、温かみのあるくすみピンク */
-      --color-bg: #FFFAF0;      /* 柔らかいオフホワイト（クリーム色） */
-      --color-bg-light: #FFF5F2; /* さらに淡いピンクベージュ */
-      --color-text: #5D4037;    /* 目に優しいダークブラウン（焦げ茶） */
-      --color-text-sub: #8D6E63; /* 少し薄いブラウン */
+      --color-main: #D4A373;    /* どんなテーマにも馴染む落ち着いたベージュゴールド */
+      --color-bg: #FAF9F6;      /* 上質なオフホワイト */
+      --color-text: #4A4A4A;    /* 読みやすいダークグレー */
+      --color-text-sub: #7A7A7A;
       --color-white: #FFFFFF;
-      --color-accent: #81D4FA;   /* タグ用の淡いブルー（アクセント） */
       --font-sans: 'Noto Sans JP', sans-serif;
     }
 
@@ -34,167 +27,120 @@
       line-height: 1.8;
       background-color: var(--color-bg);
       letter-spacing: 0.03em;
-      word-wrap: break-word;
+      text-align: center; /* 全体を基本センターに */
     }
     
     img { max-width: 100%; height: auto; vertical-align: middle; object-fit: cover; }
-    a { color: var(--color-text); text-decoration: none; transition: 0.3s; }
+    a { text-decoration: none; transition: 0.3s; }
     
     .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
     /* Animation */
-    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+    .reveal { opacity: 0; transform: translateY(30px); transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
     .reveal.active { opacity: 1; transform: translateY(0); }
 
-    /* Components */
-    .btn {
-      display: inline-block;
-      background-color: var(--color-main);
-      color: #fff;
-      padding: 14px 40px;
-      border-radius: 50px; /* 【修正】完全に丸く（ピル型） */
-      font-weight: 700;
-      text-align: center;
-      /* 【修正】影もピンクがかった柔らかいものに */
-      box-shadow: 0 5px 15px rgba(226, 147, 131, 0.3);
-      font-size: 1rem;
-    }
-    .btn:hover {
-      background-color: #D38271;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(226, 147, 131, 0.4);
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      font-weight: 700;
-      color: var(--color-text);
-      position: relative;
-      display: inline-block;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    /* 【追加】タイトルの下に可愛いドットのアンダーライン */
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background-image: radial-gradient(var(--color-main) 1.5px, transparent 1.5px);
-      background-size: 6px 6px;
-      background-repeat: repeat-x;
-    }
-
-    .section-lead {
-      text-align: center;
-      color: var(--color-text-sub);
-      max-width: 600px;
-      margin: 0 auto 60px;
-      font-size: 0.95rem;
-    }
-
-    /* ------------------------------
-       Layouts
-    ------------------------------ */
     /* Header */
     header {
-      background: rgba(255, 250, 240, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(5px);
       position: sticky;
       top: 0;
       z-index: 100;
       padding: 15px 0;
-      border-bottom: 1px solid #FFEBEF; /* 淡いピンクのボーダー */
+      border-bottom: 1px solid #EAEAEA;
     }
     .header-inner { display: flex; justify-content: space-between; align-items: center; }
-    .logo {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--color-main);
-      letter-spacing: 0.05em;
-    }
-    nav a { font-size: 0.9rem; margin-left: 20px; font-weight: 500; }
-    nav a:hover { color: var(--color-main); }
+    .logo { font-size: 1.2rem; font-weight: 700; color: var(--color-text); }
+    nav a { font-size: 0.85rem; margin-left: 20px; font-weight: 500; color: var(--color-text); }
 
     /* Hero */
-    .hero { padding: 120px 0; text-align: center; background-color: var(--color-bg-light); border-radius: 0 0 50px 50px;}
-    .hero h1 { font-size: 2.8rem; line-height: 1.4; margin-bottom: 30px; font-weight: 700;}
+    .hero { padding: 120px 0; background-color: var(--color-white); border-bottom: 1px solid #EAEAEA; }
+    .hero h1 { font-size: 2.6rem; line-height: 1.4; margin-bottom: 25px; font-weight: 700; }
     .hero h1 span { color: var(--color-main); }
-    .hero p { font-size: 1.1rem; color: var(--color-text-sub); max-width: 700px; margin: 0 auto 50px; }
+    .hero p { font-size: 1.1rem; color: var(--color-text-sub); max-width: 700px; margin: 0 auto 40px; line-height: 2; }
+    .btn {
+      display: inline-block;
+      background-color: var(--color-main);
+      color: #fff;
+      padding: 16px 45px;
+      border-radius: 4px;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(212, 163, 115, 0.3);
+    }
 
-    /* Works Section */
+    /* Section Common */
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 50px;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 25%;
+      width: 50%;
+      height: 2px;
+      background-color: var(--color-main);
+    }
+
+    /* Works Grid */
     .works { padding: 100px 0; }
     .works-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+      text-align: left; /* カード内は左寄せ */
     }
     .work-card {
       background: var(--color-white);
-      border-radius: 20px; /* 【修正】角を大きく丸く */
+      border-radius: 8px;
       overflow: hidden;
-      /* 【修正】柔らかいピンクがかった影 */
-      box-shadow: 0 10px 30px rgba(226, 147, 131, 0.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
       transition: 0.3s;
       display: flex;
       flex-direction: column;
-      border: 1px solid #FFEBEF; /* 淡いピンクのボーダー */
     }
-    .work-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(226, 147, 131, 0.15);
-    }
-    
-    .work-img-wrap { width: 100%; height: 230px; overflow: hidden; position: relative; border-bottom: 1px solid #FFEBEF; }
-    /* 画像の上部の角も丸く */
-    .work-img-wrap img { width: 100%; height: 100%; object-fit: cover; border-radius: 20px 20px 0 0; }
-    
-    .work-content { padding: 30px; flex: 1; display: flex; flex-direction: column;}
-    /* 【修正】タグの色を少し淡く */
-    .work-tag { font-size: 0.75rem; color: #5C6BC0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
-    .work-card h3 { font-size: 1.35rem; margin-bottom: 12px; font-weight: 700; color: var(--color-text); }
-    .work-card p { font-size: 0.9rem; color: var(--color-text-sub); margin-bottom: 25px; flex: 1; line-height: 1.7;}
-    .work-link { margin-top: auto; text-align: center;}
-    .work-link .btn { width: 100%;}
+    .work-card:hover { transform: translateY(-8px); }
+    .work-img-wrap { width: 100%; height: 210px; border-bottom: 1px solid #F0F0F0; }
+    .work-content { padding: 25px; flex: 1; display: flex; flex-direction: column; }
+    .work-tag { font-size: 0.7rem; font-weight: 700; color: var(--color-main); letter-spacing: 0.1em; margin-bottom: 10px; }
+    .work-card h3 { font-size: 1.25rem; margin-bottom: 12px; }
+    .work-card p { font-size: 0.9rem; color: var(--color-text-sub); margin-bottom: 20px; flex: 1; }
+    .work-card .btn { padding: 10px; font-size: 0.85rem; text-align: center; width: 100%; box-shadow: none; border: 1px solid var(--color-main); background: transparent; color: var(--color-main); }
+    .work-card .btn:hover { background: var(--color-main); color: #fff; }
 
-    /* About Section */
-    .about { padding: 100px 0; background-color: var(--color-bg-light); text-align: center; border-radius: 50px;}
-    .about-content { max-width: 700px; margin: 0 auto; }
-    .about h3 { font-size: 1.7rem; margin-bottom: 25px; color: var(--color-main); font-weight: 700;}
-    .about p { margin-bottom: 30px; color: var(--color-text-sub); }
-    .skill-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 25px; }
-    /* 【修正】スキルタグもふんわり丸く */
-    .skill-tag { background: var(--color-white); border: 1px solid #FFEBEF; padding: 10px 25px; border-radius: 50px; font-size: 0.85rem; color: var(--color-text); font-weight: 500; box-shadow: 0 3px 6px rgba(0,0,0,0.03);}
+    /* About */
+    .about { padding: 100px 0; background-color: #F3F1ED; }
+    .about-content { max-width: 750px; margin: 0 auto; }
+    .about h3 { font-size: 1.6rem; margin-bottom: 20px; }
+    .about p { text-align: justify; margin-bottom: 30px; }
+    .skill-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .skill-tag { background: #fff; padding: 8px 18px; border-radius: 4px; font-size: 0.85rem; border: 1px solid #DDD; }
 
-    /* Contact Section */
-    .contact { padding: 120px 0; text-align: center; }
-    .contact h2::after { background-image: radial-gradient(#666 1.5px, transparent 1.5px); } /* コンタクトは落ち着いた色で */
+    /* Contact */
+    .contact { padding: 120px 0; }
 
     /* Footer */
-    footer { background-color: var(--color-text); color: var(--color-white); padding: 40px 0; text-align: center; font-size: 0.85rem; opacity: 0.9; }
+    footer { background-color: #333; color: #fff; padding: 40px 0; font-size: 0.8rem; }
 
     /* Responsive */
     @media (max-width: 768px) {
-      .hero { padding: 80px 0; border-radius: 0 0 30px 30px; }
-      .hero h1 { font-size: 2rem; }
+      .hero h1 { font-size: 1.8rem; }
       .section-title { font-size: 1.7rem; }
-      .works-grid { grid-template-columns: 1fr; gap: 30px; }
-      .work-img-wrap { height: 210px; }
-      .work-content { padding: 25px; }
-      .about, footer { border-radius: 30px 30px 0 0;}
+      .works-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-<header role="banner">
+<header>
   <div class="container header-inner">
-    <div class="logo">◯◯◯◯ のポートフォリオ</div>
-    <nav aria-label="メインナビゲーション">
+    <div class="logo">ASUKA KANNO</div>
+    <nav>
       <a href="#works">Works</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -202,104 +148,87 @@
   </div>
 </header>
 
-<main role="main">
-    
+<main>
   <section class="hero reveal">
     <div class="container">
-      <h1>想いを形にする、<br><span>ふんわり伝わるLP</span>を。<</h1>
+      <h1>ブランドの「想い」を、<br><span>最適な形</span>で実装します。</h1>
       <p>
-        Webコーダーの◯◯◯◯です。<br>
-        「可愛い」「優しい」「女性向け」のデザインを、スマホで見た時に一番美しく、使いやすいコードに落とし込みます。クライアント様の想いを、心を込めて形にします。
+        菅野明日香（かんの あすか）です。<br>
+        「可愛さ」や「優しさ」を活かした女性向けデザインはもちろん、ビジネス、フィットネス、ラグジュアリーなど、ブランドのテーマに合わせた最適なコーディングを提供します。
       </p>
       <a href="#works" class="btn">制作実績を見る</a>
     </div>
   </section>
 
-  <section id="works" class="works">
-    <div class="containers">
-      <h2 class="section-title reveal">Works</h2>
-      <p class="section-lead reveal">これまで心を込めて制作したLPのサンプルです。<br>異なるジャンルのデザインテンプレートをご用意しています。</p>
+  <section id="works" class="works container">
+    <h2 class="section-title reveal">Works</h2>
+    
+    <div class="works-grid">
+      <article class="work-card reveal">
+        <div class="work-img-wrap"><img src="1.jpg" alt="Cake Shop LP"></div>
+        <div class="work-content">
+          <div class="work-tag">SWEET / CAFE</div>
+          <h3>洋菓子店ブランドLP</h3>
+          <p>パステルカラーと柔らかなアニメーションで、お店の世界観を表現。スマホでの「買いやすさ」を重視しています。</p>
+          <a href="https://akalxd140206-cpu.github.io/LP-/" class="btn">サイトを見る</a>
+        </div>
+      </article>
       
-      <div class="works-grid container">
-        
-        <article class="work-card reveal">
-          <div class="work-img-wrap">
-            <img src="1.jpg" alt="可愛いケーキ屋のLPファーストビュー">
-          </div>
-          <div class="work-content">
-            <div class="work-tag">FOOD / CAFE</div>
-            <h3>ふんわりケーキ屋LP</h3>
-            <p>30代女性をターゲットに、「ふわふわ感」「パステルカラー」で甘い誘惑を演出。Instagramとの連携を意識したデザインです。</p>
-            <div class="work-link"><a href="#" class="btn" target="_blank" rel="noopener noreferrer">サイトを見る</a></div>
-          </div>
-        </article>
-        
-        <article class="work-card reveal" style="transition-delay: 0.1s;">
-          <div class="work-img-wrap">
-            <img src="4.jpg" alt="子供服ブランドのLPファーストビュー">
-          </div>
-          <div class="work-content">
-            <div class="work-tag">FASHION / KIDS</div>
-            <h3>こだわりの子供服LP</h3>
-            <p>30-40代のママをターゲットに、「くすみカラー」「フレンチ・シック」で上質さをアピール。コーデ紹介と購入リンクをスムーズに配置。</p>
-            <div class="work-link"><a href="#" class="btn" target="_blank" rel="noopener noreferrer">サイトを見る</a></div>
-          </div>
-        </article>
+      <article class="work-card reveal">
+        <div class="work-img-wrap"><img src="4.jpg" alt="KIDS Wear LP"></div>
+        <div class="work-content">
+          <div class="work-tag">FASHION / KIDS</div>
+          <h3>子供服セレクトショップ</h3>
+          <p>くすみカラーと洗練されたフォント選びで、上質なライフスタイルを提案。ブランドの信頼感を高める実装です。</p>
+          <a href="https://akalxd140206-cpu.github.io/LP/#coord" class="btn">サイトを見る</a>
+        </div>
+      </article>
 
-        <article class="work-card reveal">
-          <div class="work-img-wrap">
-            <img src="2.jpg" alt="SaaS（タスク管理）のLPファーストビュー">
-          </div>
-          <div class="work-content">
-            <div class="work-tag">SERVICE / SaaS</div>
-            <h3>タスク管理SaaS LP</h3>
-            <p>「業務効率化」をテーマに、数字やグラフを用いて信頼感をアピール。クリーンでモダンなレスポンシブデザインです。</p>
-            <div class="work-link"><a href="#" class="btn" target="_blank" rel="noopener noreferrer">サイトを見る</a></div>
-          </div>
-        </article>
+      <article class="work-card reveal">
+        <div class="work-img-wrap"><img src="2.jpg" alt="SaaS LP"></div>
+        <div class="work-content">
+          <div class="work-tag">BUSINESS / SaaS</div>
+          <h3>タスク管理ツールLP</h3>
+          <p>情報を整理し、利便性を直感的に伝えるビジネスデザイン。グリッドシステムを活用した整ったレイアウトです。</p>
+          <a href="https://akalxd140206-cpu.github.io/LP3/#pricing" class="btn">サイトを見る</a>
+        </div>
+      </article>
 
-        <article class="work-card reveal" style="transition-delay: 0.1s;">
-          <div class="work-img-wrap">
-            <img src="3.jpg" alt="パーソナルジムのLPファーストビュー">
-          </div>
-          <div class="work-content">
-            <div class="work-tag">HEALTH / GYM</div>
-            <h3>パーソナルジムLP</h3>
-            <p>黒基調に赤のアブストラクトカラーで「情熱」「高級感」を演出。「結果」へのコミットと、体験予約へ繋げる強いCTAが特徴です。</p>
-            <div class="work-link"><a href="#" class="btn" target="_blank" rel="noopener noreferrer">サイトを見る</a></div>
-          </div>
-        </article>
+      <article class="work-card reveal">
+        <div class="work-img-wrap"><img src="3.jpg" alt="Gym LP"></div>
+        <div class="work-content">
+          <div class="work-tag">HEALTH / GYM</div>
+          <h3>パーソナルジム LP</h3>
+          <p>コントラストの強い配色で、アクティブな印象に。視線誘導を意識し、予約率の最大化を狙った構成です。</p>
+          <a href="https://akalxd140206-cpu.github.io/LP2/" class="btn">サイトを見る</a>
+        </div>
+      </article>
 
-        <article class="work-card reveal">
-          <div class="work-img-wrap">
-            <img src="5.jpg" alt="高級ペンのLPファーストビュー">
-          </div>
-          <div class="work-content">
-            <div class="work-tag">GOODS / LUXURY</div>
-            <h3>ミニマルな高級ペンLP</h3>
-            <p>黒とグレーを基調とした、カッチリ、シャープな印象のLP。ミニマルなデザインで、プロダクトの美しさを際立たせます。</p>
-            <div class="work-link"><a href="#" class="btn" target="_blank" rel="noopener noreferrer">サイトを見る</a></div>
-          </div>
-        </article>
-      </div>
-
+      <article class="work-card reveal">
+        <div class="work-img-wrap"><img src="5.jpg" alt="Luxury Pen LP"></div>
+        <div class="work-content">
+          <div class="work-tag">MINIMAL / LUXURY</div>
+          <h3>高級文具 プロダクトLP</h3>
+          <p>余白を贅沢に使い、製品の美しさを際立たせるミニマルデザイン。大人の余裕を感じさせる実装です。</p>
+          <a href="https://akalxd140206-cpu.github.io/LP1/" class="btn">サイトを見る</a>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section id="about" class="about reveal">
-    <div class="container about-content">
-      <h2 class="section-title">About Me</h2>
-      <p class="section-lead">◯◯◯◯ の自己紹介</p>
-      <h3>「見やすい」「分かりやすい」コードを心掛けます</h3>
+  <section id="about" class="about">
+    <div class="container about-content reveal">
+      <h2 class="section-title">About</h2>
+      <h3>菅野明日香 / Web Coder</h3>
       <p>
-        ただコードを書くのではなく、そのサイトを訪れるユーザーのことを想い、最適なコーディングを行います。<br>
-        特に「女性向け」「ファミリー向け」のふんわりとした柔らかいデザインを、崩れることなく、かつ表示速度も意識して実装するのが得意です。
+        お客様の数だけ、ブランドの「色」があります。私は、その一つひとつのテーマを深く理解し、HTML/CSSで正確に表現することを大切にしています。
+        女性向けの柔らかな表現から、カッチリとしたビジネス向けの実装まで、ターゲットに合わせた「伝わる」コーディングをお任せください。
       </p>
       <div class="skill-tags">
-        <span class="skill-tag">HTML5 / CSS3</span>
-        <span class="skill-tag">JavaScript (IntersectionObserver)</span>
-        <span class="skill-tag">レスポンシブ (スマホファースト)</span>
-        <span class="skill-tag">GitHub / GitHub Pages</span>
+        <span class="skill-tag">レスポンシブ実装</span>
+        <span class="skill-tag">ブランドテーマ最適化</span>
+        <span class="skill-tag">JavaScriptアニメーション</span>
+        <span class="skill-tag">GitHub Pages運用</span>
       </div>
     </div>
   </section>
@@ -307,33 +236,23 @@
   <section id="contact" class="contact reveal">
     <div class="container">
       <h2 class="section-title">Contact</h2>
-      <p class="section-lead">まずはお気軽にご相談ください。</p>
-      <p style="margin-bottom:30px; color:var(--color-text-sub);">「こんなLP作りたいんだけど」「費用はどれくらい？」など、<br>どんなことでもお気軽にお問い合わせください。</p>
+      <p style="margin-bottom: 30px;">お仕事のご依頼、ご相談はココナラにて承っております。</p>
       <a href="#" class="btn">ココナラで相談する</a>
     </div>
   </section>
-
 </main>
 
-<footer role="contentinfo">
+<footer>
   <div class="container">
-    <p>&copy; 2026 ◯◯◯◯ . All rights reserved.</p>
+    <p>&copy; 2026 ASUKA KANNO. All rights reserved.</p>
   </div>
 </footer>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  });
+  const obs = new IntersectionObserver((es) => {
+    es.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); });
+  }, {threshold: 0.1});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
-
 </body>
 </html>
